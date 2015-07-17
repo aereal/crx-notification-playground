@@ -1,0 +1,11 @@
+{
+  "name": "crx-notification-playground",
+  "version": "0.0.1",
+  "description": "Play with [chrome.notifications API][chrome.notification API].",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "aereal",
+  "license": "MIT"
+}
