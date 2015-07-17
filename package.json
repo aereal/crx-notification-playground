@@ -4,6 +4,7 @@
   "description": "Play with [chrome.notifications API][chrome.notification API].",
   "main": "index.js",
   "scripts": {
+    "build": "$(npm bin)/gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "aereal",
