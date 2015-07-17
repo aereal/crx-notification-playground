@@ -1,0 +1,16 @@
+{
+  "name": "Notification Playground",
+  "version": "0.0.1",
+
+  "description": "(PRERELEASE) My sandbox",
+
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+
+  "permissions": [
+    "notifications"
+  ],
+
+  "manifest_version": 2
+}

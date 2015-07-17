@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Popup</title>
+    <style>
+      .message {
+        padding: 1em;
+        border: solid 1px white;
+      }
+      .message.failure {
+        border-color: red;
+      }
+      .message.successful {
+        border-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Popup</h1>
+    </header>
+    <main>
+      <button data-template-type="basic">Basic</button>
+      <button data-template-type="list">List</button>
+      <button data-template-type="progress">Progress</button>
+      <div id="action-message" class="message"></div>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
