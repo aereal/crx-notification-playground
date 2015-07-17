@@ -3,11 +3,11 @@ var browserify = require('browserify');
 var vinyl      = require('vinyl-source-stream');
 
 var JS_DIST_NAME       = 'popup.js';
-var JS_DIST_DIR        = './dist/';
+var DIST_DIR        = './dist/';
 var JS_ENTRYPOINT_PATH = './src/popup.ts';
 var JS_WATCH_PATTERNS  = ['src/**/*.ts'];
 
-gulp.task('build', ['js']);
+gulp.task('build', ['js', 'manifest', 'assets']);
 
 gulp.task('js', function () {
     var src = browserify({
@@ -18,7 +18,27 @@ gulp.task('js', function () {
     });
     return src.bundle()
         .pipe(vinyl(JS_DIST_NAME))
-        .pipe(gulp.dest(JS_DIST_DIR));
+        .pipe(gulp.dest(DIST_DIR));
+});
+
+gulp.task('manifest', function () {
+  return gulp.src(
+    ['src/manifest.json'],
+    {
+      base: 'src/',
+    }
+  )
+  .pipe(gulp.dest('dist'));
+});
+
+gulp.task('assets', function () {
+  return gulp.src(
+    ['src/popup.html', 'src/images/*'],
+    {
+      base: 'src/',
+    }
+  )
+  .pipe(gulp.dest('dist'));
 });
 
 gulp.task('watch', function () {
