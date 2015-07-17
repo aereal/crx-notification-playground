@@ -4,5 +4,15 @@
   "ref": "master",
   "path": "src/typings",
   "bundle": "src/typings/tsd.d.ts",
-  "installed": {}
+  "installed": {
+    "es6-promise/es6-promise.d.ts": {
+      "commit": "76e1dedf0bada455c0b75abeec3206d3aa5bd892"
+    },
+    "chrome/chrome.d.ts": {
+      "commit": "76e1dedf0bada455c0b75abeec3206d3aa5bd892"
+    },
+    "webrtc/MediaStream.d.ts": {
+      "commit": "76e1dedf0bada455c0b75abeec3206d3aa5bd892"
+    }
+  }
 }
